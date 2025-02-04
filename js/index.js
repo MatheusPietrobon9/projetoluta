@@ -1,6 +1,6 @@
 let log = new Log(document.querySelector('.log'));
-let char = new Sorcerer('Nokron');
-let monster = new BigMonster();
+let char = new Sorcerer('Ryu');
+let monster = new BigMonster('Ken');
 
 const gameStage = new Stage(
     char,

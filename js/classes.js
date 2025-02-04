@@ -38,8 +38,8 @@ class Sorcerer extends Character {
 }
 
 class LittleMonster extends Character {
-    constructor() {
-        super('Little Monster')
+    constructor(name) {
+        super(name)
         this.life = 40;
         this.attack = 4;
         this.defense = 4;
@@ -48,8 +48,8 @@ class LittleMonster extends Character {
 }
 
 class BigMonster extends Character {
-    constructor() {
-        super('Big Monster');
+    constructor(name) {
+        super(name);
         this.life = 120;
         this.attack = 16;
         this.defense = 6;
@@ -72,12 +72,13 @@ class Stage {
         this.fighter1El.querySelector('.attackButton').addEventListener('click',() => this.doAttack(this.fighter1,this.fighter2));
         this.fighter2El.querySelector('.attackButton').addEventListener('click', () => this.doAttack(this.fighter2,this.fighter1));
     }
-
+lifebar
     update() {
         // Fighter 1
         this.fighter1El.querySelector('.name').innerHTML = `${this.fighter1.name} - ${this.fighter1.life.toFixed(1)} HP`;
         let f1Pct = (this.fighter1.life / this.fighter1.maxLife) * 100;
         this.fighter1El.querySelector('.bar').style.width = `${f1Pct}%`;
+
         // Fighter 2
         this.fighter2El.querySelector('.name').innerHTML = `${this.fighter2.name} - ${this.fighter2.life.toFixed(1)} HP`;
         let f2Pct = (this.fighter2.life / this.fighter2.maxLife) * 100;
