@@ -1,11 +1,13 @@
-let char = new Knight('Gordof');
-let monster = new LittleMonster();
+let log = new Log(document.querySelector('.log'));
+let char = new Sorcerer('Nokron');
+let monster = new BigMonster();
 
-const gameStage = new stage(
+const gameStage = new Stage(
     char,
     monster,
     document.querySelector('#char'),
-    document.querySelector('#monster')
-)
+    document.querySelector('#monster'),
+    log
+);
 
 gameStage.start();
