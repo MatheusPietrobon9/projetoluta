@@ -137,6 +137,7 @@ class Log {
     }
 }
 
+
 let musica = document.getElementById('musica');
 let icone = document.getElementById('iconeSom');
 let tocouUmaVez = false; 
